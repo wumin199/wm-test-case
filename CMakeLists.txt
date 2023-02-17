@@ -87,4 +87,5 @@ add_executable(main main.cc)
 # eigen_test test
 ###############################################
 add_subdirectory(src/test_eigen)
+add_subdirectory(src/test_fmt)
 
