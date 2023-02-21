@@ -6,7 +6,7 @@
 # 需要注意的是-DCMAKE_PREFIX_PATH=/home/xyz/Release/xyz  -> conan包安装路径
 # /home/xyz -> /home/wumin199
 
-cmake -B /home/xyz/wm-test-case/build -S /home/xyz/wm-test-case/ -DCMAKE_TOOLCHAIN_FILE=/opt/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-linux -DCMAKE_PREFIX_PATH=/home/xyz/Release/xyz -DCMAKE_INSTALL_PREFIX="/opt/xyz/" -DCMAKE_BUILD_TYPE=Release
+cmake -B /home/xyz/wm-test-case/build -S /home/xyz/wm-test-case/ -DCMAKE_TOOLCHAIN_FILE=/opt/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-linux -DCMAKE_PREFIX_PATH=/home/xyz/Release/xyz -DCMAKE_INSTALL_PREFIX="/home/xyz/install" -DCMAKE_BUILD_TYPE=Release
 
 cmake --build /home/xyz/wm-test-case/build --parallel 10 --config Release
 # 或者：
@@ -15,7 +15,7 @@ cmake --build /home/xyz/wm-test-case/build --parallel 10 --config Release
 
 
 # 其他：
-make install
+make install  # install path is set by -DCMAKE_INSTALL_PREFIX="/home/xyz/install" , starting with / is absolute path, otherwise is relative path
 # 格式检查
 cmake --build /home/xyz/wm-test-case/build --target clang-format
 cmake --build /home/xyz/wm-test-case/build --target cpplint
