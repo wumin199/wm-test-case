@@ -78,14 +78,15 @@ set(required_libraries
         )
 
 ###############################################
-# eigen_test test
+# main
 ###############################################
 add_executable(main main.cc)
 
 
 ###############################################
-# eigen_test test
+# test folder
 ###############################################
 add_subdirectory(src/test_eigen)
 add_subdirectory(src/test_fmt)
+add_subdirectory(src/test_cmake)
 
