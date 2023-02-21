@@ -2,11 +2,11 @@
  * Copyright (c) MinWu - All Rights Reserved
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
- * Author: MinWu <wumin199@126.com>
+ * Author: MinWu <wumin199@126.com>, 2023/02/20
  */
 
 #include <iostream>
-
+#include <string.h>
 using byte = uint8_t;
 
 using usigned_word = uint16_t;
