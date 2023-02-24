@@ -81,7 +81,22 @@ void SetRealAt(byte *buffer, int pos, float value) {
   uint32_t pack;
   memcpy(&pack, &value, 4);
   SetUDIntAt(buffer, pos, pack);
-
 }
 
-int main(int argc, char *argv[]) {}
+
+void test_string(){
+  std::string s1 = "hello_word";
+  std::cout << "number of characters: " << s1.size() << std::endl;
+
+  /**
+   * 常见的编码字符与字节的对应关系如下：
+    1、ASCII码中，一个英文字母（不分大小写）占一个字节的空间，一个中文汉字占两个字节的空间。一个二进制数字序列，在计算机中作为一个数字单元，一般为8位二进制数，换算为十进制。最小值0，最大值255。
+    2、UTF-8编码中，一个英文字符等于一个字节，一个中文（含繁体）等于三个字节。
+    3、Unicode编码中，一个英文等于两个字节，一个中文（含繁体）等于两个字节。
+       符号：英文标点占一个字节，中文标点占两个字节。举例：英文句号“.”占1个字节的大小，中文句号“。”占2个字节的大小。
+   */
+}
+
+int main(int argc, char *argv[]) {
+  test_string();
+}

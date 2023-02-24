@@ -89,4 +89,5 @@ add_executable(main main.cc)
 add_subdirectory(src/test_eigen)
 add_subdirectory(src/test_fmt)
 add_subdirectory(src/test_cmake)
+add_subdirectory(src/test_basic)
 
